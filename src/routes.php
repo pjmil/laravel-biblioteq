@@ -1,10 +1,8 @@
 <?php
 
-namespace Pjmil\LaravelBiblioteq;
+namespace Pjmil\Biblioteq;
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/biblio/{item?}/', [Controllers\BiblioteqController::class, 'show'])->where(
-    'item',
-    '.*',
-);
+Route::get('/biblioteq/{item?}/', [Controllers\BiblioteqController::class, 'show'])
+    ->where('item', '.*');

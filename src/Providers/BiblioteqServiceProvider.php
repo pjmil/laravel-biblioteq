@@ -1,6 +1,6 @@
 <?php
 
-namespace Pjmil\LaravelBiblioteq\Providers;
+namespace Pjmil\Biblioteq\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
@@ -13,7 +13,7 @@ class BiblioteqServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->loadViewsFrom(static::VIEW_PATH, 'book');
+        $this->loadViewsFrom(static::VIEW_PATH, 'biblioteq');
         $this->loadRoutesFrom(static::ROUTE_PATH);
         $this->publishes(
             [
@@ -22,10 +22,8 @@ class BiblioteqServiceProvider extends ServiceProvider
             'biblioteq',
         );
 
-        // biblio::{view}
         View::addNamespace('biblio', static::VIEW_PATH);
 
-        // <x-biblio::{view} />
         Blade::anonymousComponentPath(static::VIEW_PATH . '/components', 'biblio');
     }
 }
