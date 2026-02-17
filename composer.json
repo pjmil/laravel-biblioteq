@@ -1,6 +1,7 @@
 {
     "name": "pjmil/laravel-biblioteq",
     "description": "Simple UI component viewer for Blade components.",
+    "homepage": "https://github.com/pjmil/laravel-biblioteq",
     "type": "library",
     "license": "proprietary",
     "autoload": {
