@@ -12,12 +12,13 @@ class BiblioteqController
     public static $exclude_dirs;
     public static $files;
     public static $options;
-
+    
     public function __construct()
     {
-        self::$components_path = resource_path('views/components');
-        self::$valid_exts = ['.blade.php'];
-        self::$exclude_dirs = ['/cms'];
+        self::$components_path = config('biblioteq.components_path', resource_path('views/components'));
+        self::$valid_exts = config('biblioteq.valid_exts', ['.blade.php']);
+        self::$exclude_dirs = config('biblioteq.exclude_dirs', []);
+
         self::$files = collect(File::files(self::$components_path . '/**'));
         self::$options = null;
     }
