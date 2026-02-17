@@ -1,0 +1,26 @@
+{
+    "name": "pjmil/laravel-biblioteq",
+    "description": "Modular book system",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Pjmil\\LaravelBiblioteq\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Paul Millar",
+            "email": "paul@millar.id"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pjmil\\LaravelBiblioteq\\Providers\\BiblioteqServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "laravel/framework": "^12.0"
+    }
+}
