@@ -1,8 +1,6 @@
 @props(['links', 'item'])
 
-<aside id="layout-sidebar"
-    class="bg-base-200 overlay overlay-open:translate-x-0 drawer drawer-start sm:w-75 inset-y-0 start-0 hidden h-full [--auto-close:lg] lg:z-50 lg:block lg:translate-x-0 lg:shadow-none"
-    aria-label="Sidebar" tabindex="-1">
+<aside id="layout-sidebar" class="bg-base-200 overlay overlay-open:translate-x-0 drawer drawer-start sm:w-75 inset-y-0 start-0 hidden h-full [--auto-close:lg] lg:z-50 lg:block lg:translate-x-0 lg:shadow-none" aria-label="Sidebar" tabindex="-1">
     <div class="drawer-body border-base-content/20 h-full border-e p-0">
         <div class="flex h-full max-h-full flex-col">
             <div class="bg-base-200 text-base-content/50 border-base-content/20 flex items-center gap-4 border-b px-4 py-4">
@@ -21,17 +19,16 @@
                             {{ $key }}
                         </li>
 
+                        <ul>
                         @foreach ($values as $item)
                             <li id="{{ $item }}">
-                                <a href="/biblio/{{ $item }}" @class('inline-flex w-full items-center px-2', [
-                                    'menu-active' => $item === request()->segment(2),
-                                ])>
+                                <a href="/biblio/{{ $item }}" @class('inline-flex w-full items-center px-2', [ 'menu-active'=> $item === request()->segment(2),
+                                    ])>
                                     <span>{{ $item }}</span>
                                 </a>
                             </li>
                         @endforeach
-
-                        </li>
+                        </ul>
                     @endforeach
                 </ul>
             </div>

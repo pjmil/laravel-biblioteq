@@ -12,11 +12,10 @@
         </div>
 
         <label class="swap swap-rotate">
-        <input type="checkbox" value="dark" data-toggle-theme="dark" class="theme-controller" />
-        <span class="swap-off icon-[tabler--sun] size-7"></span>
-        <span class="swap-on icon-[tabler--moon] size-7"></span>
+            <input type="checkbox" value="dark" data-toggle-theme="dark" class="theme-controller" />
+            <span class="swap-off icon-[tabler--sun] size-7"></span>
+            <span class="swap-on icon-[tabler--moon] size-7"></span>
         </label>
-
     </div>
 
     <div class="navbar-end items-center gap-2">

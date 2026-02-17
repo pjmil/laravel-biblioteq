@@ -9,8 +9,6 @@
 
     <div class="bg-base-100 text-base-content lg:ps-75 flex grow flex-col">
         {{ $page }}
-
         {{ $footer }}
     </div>
 </div>
-

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pjmil\Biblioteq\Controllers;
+namespace Pjmil\Biblioteq;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Request;
@@ -50,7 +50,7 @@ class BiblioteqController
             }
         }
 
-        return view('biblioteq::index', [
+        return view('biblioteq::layout', [
             'links' => $links,
             'item' => $item,
             'options' => self::$options,
